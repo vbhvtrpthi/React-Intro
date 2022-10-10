@@ -1,0 +1,43 @@
+What is REACT?
+
+* It is basicaly a JS library which is used to develop UI or frontend.
+* It is developed by FB
+
+Why REACT?
+* FAST -because of Diffing algo and virtual DOM
+* Easy Event Handling (Provide shortcuts)
+* It's small library, It's easy to learn
+* It manage UI by states
+   
+Components
+We divide our page into the components so that it's easy to manage and also our code looks clean.
+* It is basicaly, isolated, reusable,independent piece of code.
+* In REACT two types of Components:- Functional, class.
+
+JSX-( Javascript XML)
+* HTML+JS
+* JSX allows us to write HTML inside JavaScript and place them in the DOM without using functions like appendChild() or createElement().
+As stated in the official docs of REACT, JSX provides syntactic sugar for REACT.createElement() function
+
+jsx -> Babel -> JS (Browser only understand js)
+
+Rules For JSX
+* whatever we will write  inside 'return()' is JSX
+* Only a wrapper(Single div / React.Fragement / <> </>) should be returned.
+* JS code can be written inside JSX using {}
+* What is not allowed ?
+   No Varibale decln
+   No function decln  
+   No loop(For,while,do-while)   ->  map,filter allowed
+   if-else statement not allowed ->  Ternary operator allowed
+   we can't render object        ->   but Array can be rendered
+
+Static UI- Functional Component (But React has introduced hooks in 2019 through which states can be defined and functional Component can be also made Dynamic)
+
+props are arguments passed into the react Components
+
+Dynamic UI- class Component
+* state- is a React obj which has info/properties of React component
+* render- displays on UI
+* Whenever state is changed, React will call the render method
+, or re render the component

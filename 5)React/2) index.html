@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Below link is for diffing algo -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script> 
+    <!-- It's used for putting the changes done by REACT virtual DOM in DOM -->
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+
+<script type="text/babel">
+
+        // way to add element in DOM before React
+
+        // let ele = document.createElement('h1')
+        // ele.innerHTML='HELLO'
+        // let root = document.getElementById('root')
+        // console.log(ele);
+        // root.appendChild(ele)
+
+        //Now the same thing can be done in React
+    //   let root =  document.getElementById('root')
+    //    let ele = React.createElement('h1', {
+    //        children:['Hello']
+    //    })
+    //    console.log(ele);
+    // //   root.appendChild(ele) //Error will come as React.createElement returns the object
+    // ReactDOM.render(ele,root)// To render the object returned we need 'ReactDOM.render' where we will pass the object which is returned by createElement, and the location to be placed in the html
+
+   //JSX
+   //Functional component.
+   //Here in params, Destructuring is done and default value is assigned.
+
+   function Element({name ='default', place = 'delhi'}){
+       console.log(name)
+       return( 
+           <div>
+           <h1>Hello {name}</h1>
+           <h6>{place}</h6>
+           </div>
+       )
+   }
+    
+// Passing props (name = 'Vaibhav' place = 'sgrl') to 'Element' component
+   function Main(){ //Reusability
+       return(
+        <React.Fragment>
+          <Element name = 'Vaibhav' place = 'sgrl'/>
+          <Element/>
+          <Element/>
+          <Element/>
+          <Element/>
+        </React.Fragment>
+       )
+   }
+   ReactDOM.render(<Main/>,document.getElementById('root'))
+
+    </script>
+</html>
